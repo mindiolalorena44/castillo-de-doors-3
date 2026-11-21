@@ -1,59 +1,72 @@
 # Castillo Infinito
 
-**Castillo Infinito** es un videojuego de terror y exploración en primera persona desarrollado con HTML, CSS y JavaScript, utilizando la biblioteca Three.js para representar el escenario en 3D.
-
-## Descripción
-
-El jugador explora un castillo formado por salas que se generan progresivamente. Cada sala tiene una puerta que conduce a la siguiente. Durante el recorrido debe buscar llaves, administrar la linterna y la energía, y evitar a las criaturas que aparecen en algunas salas.
+**Castillo Infinito** es un videojuego de exploración y terror en primera persona. El jugador avanza por un castillo formado por salas conectadas, encuentra llaves y abre puertas mientras evita a las criaturas que aparecen durante el recorrido.
 
 ## Características
 
-- Escenario 3D en primera persona.
-- Salas generadas de forma progresiva.
-- Puertas que pueden estar cerradas con llave.
-- Llaves que el jugador puede recoger.
+- Salas generadas de forma procedural, con distintas decoraciones y obstáculos.
+- Exploración en primera persona.
+- Puertas que pueden estar cerradas y requieren encontrar una llave.
 - Linterna con batería limitada.
 - Barra de energía para correr.
 - Armarios donde el jugador puede esconderse.
-- Enemigos y eventos aleatorios.
-- Efectos de sonido generados mediante JavaScript.
-- Récord de salas alcanzadas guardado en el navegador.
+- Enemigos: un espectro y un caballero.
+- Efectos de sonido y ambiente generados mediante Web Audio.
+- Récord de la sala alcanzada guardado en el almacenamiento local del navegador.
+- Controles para computadora y dispositivos con pantalla táctil.
 
 ## Controles
 
+### Computadora
+
 | Tecla o control | Acción |
 |---|---|
-| W, A, S, D | Moverse |
+| W, A, S, D o flechas | Moverse |
 | Ratón | Mirar alrededor |
 | Shift | Correr |
-| E | Interactuar: abrir puertas, recoger llaves o esconderse |
+| E | Interactuar, abrir puertas, recoger llaves o esconderse |
 | F | Encender o apagar la linterna |
-| Clic (cuando está en pausa) | Continuar |
+| Escape | Liberar el control del ratón y pausar |
 
-## Cómo ejecutar el juego
+### Dispositivos táctiles
 
-1. Descarga `index.html`.
-2. Abre el archivo con un navegador moderno, como Google Chrome, Microsoft Edge o Firefox.
-3. Pulsa **ENTRAR AL CASTILLO**.
-4. Haz clic en la ventana del juego si el navegador lo solicita para activar el control del ratón.
+- Joystick izquierdo: moverse.
+- Deslizar en la mitad derecha: mirar alrededor.
+- Botón **E**: interactuar.
+- Botón de linterna: encender o apagarla.
+- Botón de rayo: correr mientras se mantiene pulsado.
+- Botón de pausa: pausar el juego.
 
-## Tecnologías utilizadas
+En teléfonos, el juego solicita usar la pantalla en posición horizontal.
 
-- **HTML5:** estructura del juego.
-- **CSS3:** estilos de la interfaz y pantallas.
-- **JavaScript:** lógica, controles, generación de salas, enemigos y sonidos.
-- **Three.js (r128):** gráficos y escena 3D.
+## Cómo jugar
+
+1. Abre `index.html` en un navegador moderno.
+2. Selecciona **ENTRAR AL CASTILLO**.
+3. Explora cada sala y busca llaves cuando encuentres una puerta cerrada.
+4. Administra la batería de la linterna y la energía para correr.
+5. Si aparecen señales de peligro, busca un armario para esconderte.
+6. Avanza por las puertas para llegar a nuevas salas y superar tu récord.
 
 ## Requisitos
 
-- Un navegador moderno compatible con WebGL.
-- Conexión a Internet al iniciar el juego para cargar Three.js desde CDN.
+- Navegador moderno compatible con WebGL.
+- Conexión a internet para cargar Three.js desde CDN.
+- Teclado y ratón para jugar en computadora, o pantalla táctil en dispositivos compatibles.
+
+## Tecnologías utilizadas
+
+- HTML5
+- CSS3
+- JavaScript
+- [Three.js r128](https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js)
+- Web Audio API
 
 ## Archivos
 
-- `index.html`: contiene el juego completo (estructura, estilos y código JavaScript).
-- `README.md`: documentación y descripción del proyecto.
+- `index.html`: contiene el juego completo, incluidos los estilos, la lógica y la interfaz.
+- `README.md`: documentación e instrucciones del proyecto.
 
-## Nota
+## Publicación
 
-El juego utiliza Pointer Lock para controlar la cámara con el ratón. Para salir del control del ratón, utiliza la tecla `Esc`.
+Para publicar el proyecto en GitHub Pages, coloca `index.html` y `README.md` en la carpeta principal del repositorio. Luego configura GitHub Pages para publicar desde la rama y carpeta que estés utilizando.
